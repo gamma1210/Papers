@@ -1,0 +1,142 @@
+p {
+    font-family: "Helvetica";
+  }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.loading-map {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+}
+
+.loading-map p {
+    font-size: 25px;
+}
+
+.div-overlay {
+    /* width: 200px;
+    height: 150px; */
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 10;
+    padding: 15px;
+}
+
+.overlay-menu {
+    background: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
+    padding: 15px;
+    margin: 15px;
+}
+
+#overlay-reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.select {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 325px;
+    color: #cccccc;
+    vertical-align: middle;
+    text-align: left;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+  .select .placeholder {
+    position: relative;
+    display: block;
+    background-color: #ecf0f1;
+    color: black;
+    z-index: 1;
+    padding: 1em;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  /* .select .placeholder:hover {
+    background: #34383c;
+  } */
+  .select .placeholder:after {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '\25BC';
+    z-index: 10;
+  }
+  .select.is-open .placeholder:after {
+    content: '\25BC';
+  }
+  .select.is-open ul {
+    display: block;
+  }
+  .select.select--white .placeholder {
+    background: #fff;
+    color: #999;
+  }
+  .select.select--white .placeholder:hover {
+    background: #fafafa;
+  }
+  .select ul {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+    z-index: 100;
+    max-height: 120px;
+  }
+  .select ul li {
+    display: block;
+    text-align: left;
+    padding: 0.8em 1em 0.8em 1em;
+    color: #999;
+    cursor: pointer;
+  }
+  .select ul li:hover {
+    background: #4ebbf0;
+    color: #fff;
+  }
